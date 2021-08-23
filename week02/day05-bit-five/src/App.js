@@ -1,12 +1,13 @@
-//App.js문서 
-import './App.css';
+//App.js문서
+import "./App.css";
 import React from "react";
 import { BrowserRouter, HashRouter, Link, Route } from "react-router-dom";
-import "./css/style.css";
+import "./style/style.css";
 import Counter from "./components/Counter";
 import MyBTS from "./components/MyBTS";
 import MyColor from "./components/MyColor";
 import Home from "./Home";
+
 class App extends React.Component {
   render() {
     return (
@@ -27,16 +28,13 @@ class App extends React.Component {
             </li>
           </ul>
           <Route exact path="/">
-            {" "}
-            <Home />{" "}
+            <Home />
           </Route>
           <Route exact path="/counter">
-            {" "}
-            <Counter />{" "}
+            <Counter />
           </Route>
           <Route exact path="/mycolor">
-            {" "}
-            <MyColor />{" "}
+            <MyColor />
           </Route>
           <Route exact path="/mybts">
             {" "}
