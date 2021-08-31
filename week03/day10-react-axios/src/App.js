@@ -1,0 +1,112 @@
+//rce권장, rccp권장, rafce,  rcep
+
+import './App.css';
+import a1 from './img/a1.png';
+import MyCounter from './components/MyCounter';
+import React, { Component } from 'react'
+import Button from './components/Button';
+
+
+export class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <img src={a1} alt="풍선" width='400' height='100' /> <p></p> 
+        App.js 7:08  <p></p>
+        <hr></hr>
+
+        <div>
+          <Button size="large">BUTTON</Button>
+          <Button>BUTTON</Button>
+          <Button size="small">BUTTON</Button>
+        </div>
+
+        <div>
+          <Button size="large" color="gray"> BUTTON</Button>
+          <Button color="gray">BUTTON</Button>
+          <Button size="small" color="gray">BUTTON</Button>
+        </div>
+
+        <div>
+          <Button size="large" color="pink"> BUTTON </Button>
+          <Button color="pink">BUTTON</Button>
+          <Button size="small" color="pink"> BUTTON</Button>
+        </div>
+
+        <div>
+          <Button size="large" color="blue" outline> BUTTON </Button>
+          <Button color="gray" outline> BUTTON </Button>
+          <Button size="small" color="pink" outline> BUTTON </Button>
+        </div>
+
+        <div>
+            <Button size="large" fullWidth> BUTTON </Button>
+            <Button size="large" fullWidth color="gray"> BUTTON </Button>
+            <Button size="large" fullWidth color="pink">  BUTTON  </Button>
+        </div>
+
+      </div>
+    )
+  }
+} //class END
+export default App;
+
+
+//Button컴포넌트 확인
+/*
+//rce권장, rccp권장, rafce,  rcep
+
+import './App.css';
+import a1 from './img/a1.png';
+import MyCounter from './components/MyCounter';
+import React, { Component } from 'react'
+import Button from './components/Button';
+
+
+export class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <img src={a1} alt="풍선" width='400' height='100' /> <p></p> 
+        App.js 7:08  <p></p>
+        <hr></hr>
+
+        <div>
+          <Button size="large">BUTTON</Button>
+          <Button>BUTTON</Button>
+          <Button size="small">BUTTON</Button>
+        </div>
+
+        <div>
+          <Button size="large" color="gray"> BUTTON</Button>
+          <Button color="gray">BUTTON</Button>
+          <Button size="small" color="gray">BUTTON</Button>
+        </div>
+
+        <div>
+          <Button size="large" color="pink"> BUTTON </Button>
+          <Button color="pink">BUTTON</Button>
+          <Button size="small" color="pink"> BUTTON</Button>
+        </div>
+
+        <div>
+          <Button size="large" color="blue" outline> BUTTON </Button>
+          <Button color="gray" outline> BUTTON </Button>
+          <Button size="small" color="pink" outline> BUTTON </Button>
+        </div>
+
+        <div>
+            <Button size="large" fullWidth> BUTTON </Button>
+            <Button size="large" fullWidth color="gray"> BUTTON </Button>
+            <Button size="large" fullWidth color="pink">  BUTTON  </Button>
+        </div>
+
+      </div>
+    )
+  }
+}
+
+export default App;
+
+
+*/
