@@ -1,38 +1,58 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { board_save } from "./BoardReducer";
 
 export class BoardForm extends Component {
-  state = {
-    b_no: 0,
-    b_name: "",
-    b_title: "",
-    b_date: "",
-  };
+  state = {};
 
   initialSelectedBoard = {
-    b_no: 0,
-    b_name: "",
-    b_title: "",
-    b_date: "",
+    bno: 0,
+    bname: "",
+    btitle: "",
+    bwdate: "",
   };
 
-  handleChange = (e) => {};
+  handleChange = (e) => {
+    console.log(e);
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
-  handleSave = () => {};
+  handleSave = () => {
+    this.props.dispatch(board_save(this.state));
+    this.setState(this.initialSelectedBoard);
+  };
 
-  componentWillReceiveProps(n) {}
+  componentWillReceiveProps(nextProps) {
+    console.log("componentWillReceiveProps(nextProps) 처리....");
+    this.setState(nextProps.selectedBoard);
+  }
 
   render() {
     return (
       <div>
-        BoardForm.js
-        <form>
-          이름: <input type="text" />
-          내용: <input type="text" />
-          <button type="submit">submit</button>
-        </form>
+        BoardForm.js 이름:{" "}
+        <input
+          name="bname"
+          value={this.state.bname}
+          onChange={this.handleChange}
+        />
+        내용:{" "}
+        <input
+          name="btitle"
+          value={this.state.btitle}
+          onChange={this.handleChange}
+        />
+        <button onClick={this.handleSave}>submit</button>
       </div>
     );
   }
 }
 
-export default BoardForm;
+let mapStateToProps = (state) => {
+  //
+  return { selectedBoard: state.selectedBoard };
+};
+
+const mapDispatchToProps = {};
+
+export default connect(mapStateToProps)(BoardForm);
