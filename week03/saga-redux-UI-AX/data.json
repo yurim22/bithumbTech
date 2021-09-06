@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "bno": 1,
+      "bname": "bit",
+      "btitle": "빗썸",
+      "bwdate": "2021. 9. 1"
+    },
+    {
+      "id": 2,
+      "bno": 2,
+      "bname": "서유림",
+      "btitle": "react-saga",
+      "bwdate": "2021. 9. 6."
+    }
+  ]
+}
