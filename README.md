@@ -9,3 +9,8 @@
 ### 210901
 - material ui
 - redux
+
+### 210906
+- redux
+- redux-saga
+- json-server
