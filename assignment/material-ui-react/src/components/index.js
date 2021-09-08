@@ -1,0 +1,6 @@
+export { default as Home } from './Home';
+export { default as SignIn } from './SignIn';
+export { default as SignUp } from './SignUp';
+export { default as Dashboard } from './Dashboard/Dashboard';
+export { default as Album } from './Album';
+export { default as Pricing } from './Pricing';
